@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 
-import { housesData } from "../assets/data";
+import { housesData } from "~/assets/data";
 
 // create a context
 export const HouseContext = createContext();
@@ -13,6 +13,18 @@ const HouseContextProvider = ({ children }) => {
   const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState("Price range (any)");
   const [loading, setLoading] = useState(false);
+
+  // return all countries
+  useEffect(() => {
+    const allCountries = houses.map((house) => {
+      return house.country;
+    });
+    // remove duplicates
+    const uniqueCountries = ["Location (any)", ...new Set(allCountries)];
+    console.log(uniqueCountries);
+    // set countries state
+    setCountries(uniqueCountries);
+  }, []);
 
   return (
     <HouseContext.Provider
