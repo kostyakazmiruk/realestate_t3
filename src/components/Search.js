@@ -14,7 +14,7 @@ const Search = () => {
       <PropertyDropdown />
       <PriceRangeDropdown />
       <button
-        onClick={() => handleClick}
+        onClick={() => handleClick()}
         className="flex h-16 w-full items-center justify-center rounded-lg bg-violet-700 text-lg text-white transition hover:bg-violet-800 lg:max-w-[162px]"
       >
         <RiSearch2Line />

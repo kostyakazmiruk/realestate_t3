@@ -5,7 +5,7 @@ import House from "~/components/House";
 
 const HouseList = () => {
   const { houses, loading } = useContext(HouseContext);
-  console.log("houses", houses);
+  // console.log("houses", houses);
   return (
     <section className="mb-20">
       <div className="container mx-auto">

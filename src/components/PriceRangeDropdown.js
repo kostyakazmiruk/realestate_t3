@@ -11,7 +11,7 @@ import {
 
 const PriceDropdown = () => {
   const { price, setPrice, properties } = useContext(HouseContext);
-  console.log(properties);
+  // console.log(properties);
   const [isOpen, setIsOpen] = useState(false);
 
   const prices = [
